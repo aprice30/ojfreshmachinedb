@@ -59,9 +59,17 @@ WSGI_APPLICATION = 'ojfreshmachinedb.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'development': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/Applications/MAMP/db/sqlite/ojfresh',#os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd5uss0gkp2fmsp',
+        'USER': 'kxzqweuqxysmdu',
+        'PASSWORD': 'ibzqqSuo3eYe07swLv9UUBfD2x',
+        'HOST': 'ec2-54-217-238-105.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
