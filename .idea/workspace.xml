@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f5c7a7b-3ead-4d48-a73a-d9b7e3c303e7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ojfreshmachinedb/settings.py" afterPath="$PROJECT_DIR$/ojfreshmachinedb/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ojfreshmachinedb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +39,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1485">
+            <state vertical-scroll-proportion="0.0" vertical-offset="809" max-vertical-offset="1485">
               <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
               <folding />
             </state>
@@ -269,7 +267,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="103" width="1279" height="773" extended-state="6" />
+    <frame x="38" y="103" width="1279" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -316,7 +314,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1485">
+        <state vertical-scroll-proportion="0.0" vertical-offset="809" max-vertical-offset="1485">
           <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
           <folding />
         </state>
