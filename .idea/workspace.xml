@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f5c7a7b-3ead-4d48-a73a-d9b7e3c303e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ojfreshmachinedb/settings.py" afterPath="$PROJECT_DIR$/ojfreshmachinedb/settings.py" />
-    </list>
+    <list default="true" id="7f5c7a7b-3ead-4d48-a73a-d9b7e3c303e7" name="Default" comment="" />
     <ignored path="ojfreshmachinedb.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7781065" vertical-offset="899" max-vertical-offset="1575">
+            <state vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="1575">
               <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keepme.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/keepme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="676">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,7 +115,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ojfreshmachinedb" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,8 +320,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7781065" vertical-offset="899" max-vertical-offset="1575">
+        <state vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="1575">
           <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/keepme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="676">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
