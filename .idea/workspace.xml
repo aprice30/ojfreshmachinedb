@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f5c7a7b-3ead-4d48-a73a-d9b7e3c303e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ojfreshmachinedb/wsgi.py" afterPath="$PROJECT_DIR$/ojfreshmachinedb/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ojfreshmachinedb/settings.py" afterPath="$PROJECT_DIR$/ojfreshmachinedb/settings.py" />
     </list>
     <ignored path="ojfreshmachinedb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,24 +26,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-55.2" vertical-offset="0" max-vertical-offset="1725">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.2626728" vertical-offset="1074" max-vertical-offset="1725">
+              <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
               <folding>
                 <element signature="e#327#336#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34562212" vertical-offset="0" max-vertical-offset="651">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -62,8 +52,8 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/ojfreshmachinedb/settings.py" />
         <option value="$PROJECT_DIR$/ojfreshmachinedb/wsgi.py" />
+        <option value="$PROJECT_DIR$/ojfreshmachinedb/settings.py" />
       </list>
     </option>
   </component>
@@ -387,21 +377,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-55.2" vertical-offset="0" max-vertical-offset="1725">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-          <folding>
-            <element signature="e#327#336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34562212" vertical-offset="0" max-vertical-offset="651">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ojfreshmachinedb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2626728" vertical-offset="1074" max-vertical-offset="1725">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding>
+            <element signature="e#327#336#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
