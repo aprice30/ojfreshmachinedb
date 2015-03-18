@@ -14,17 +14,16 @@ import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8u+r78k0#)@ucu4^$ye1ig7nygllic!vod!1zlwg7_$2l=@6ho'
+SECRET_KEY = os.environ.get('SECRET_KEY','8u+r78k0#)@ucu4^$ye1ig7nygllic!vod!1zlwg7_$2l=@6ho')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', True)
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = os.environ.get('DEBUG', True)
 
 ALLOWED_HOSTS = []
 
@@ -80,17 +79,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()
+# If we are not running locally, fetch database details from heroku
+if (os.environ.get('DEBUG') != None):
+    # Parse database configuration from $DATABASE_URL
+    DATABASES['default'] =  dj_database_url.config()
 
-# Enable Connection Pooling (if desired)
-DATABASES['default']['ENGINE'] = 'django_postgrespool'
+    # Enable Connection Pooling (if desired)
+    DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
+    # Allow all host headers
+    ALLOWED_HOSTS = ['*']
 
 
 # Static files (CSS, JavaScript, Images)
