@@ -11,9 +11,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-# TODO: This seems very dirty. Is there a better way?
-if (os.environ.get('DEBUG') != None):
-    import dj_database_url
+# Determine if we are running on Heroku. If so we will alter some settings to fit
+IN_PROD = False
+if os.environ.get('DEBUG') is not None:
+    IN_PROD = True
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -24,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get('SECRET_KEY','8u+r78k0#)@ucu4^$ye1ig7nygllic!vod!1zlwg7_$2l=@6ho')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DEBUG') is None else False
+DEBUG = IN_PROD != True
 
-TEMPLATE_DEBUG = True if os.environ.get('DEBUG') is None else False
+TEMPLATE_DEBUG = IN_PROD != True
 
 ALLOWED_HOSTS = []
 
@@ -82,9 +83,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-# TODO: Seems dirty. Can we do better?
-# If we are not running locally, fetch database details from heroku
-if (os.environ.get('DEBUG') != None):
+# In prod we use different database settings
+if IN_PROD:
+    import dj_database_url
+
     # Parse database configuration from $DATABASE_URL
     DATABASES['default'] =  dj_database_url.config()
 
