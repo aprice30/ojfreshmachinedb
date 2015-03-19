@@ -10,7 +10,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import dj_database_url
+
+# TODO: This seems very dirty. Is there a better way?
+if (os.environ.get('DEBUG') != None):
+    import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -79,6 +82,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+# TODO: Seems dirty. Can we do better?
 # If we are not running locally, fetch database details from heroku
 if (os.environ.get('DEBUG') != None):
     # Parse database configuration from $DATABASE_URL
