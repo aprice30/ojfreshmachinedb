@@ -8,6 +8,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'ojfreshmachinedb.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^load/', include('machine.urls')),
+    url(r'^admin/', include(admin.site.urls))
 )
