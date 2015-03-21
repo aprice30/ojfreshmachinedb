@@ -31,6 +31,7 @@ TEMPLATE_DEBUG = bool(os.environ.get('DEBUG', True))
 
 ALLOWED_HOSTS = []
 
+ADMINS = (('Adam', 'aprice30@gmail.com'))
 
 # Application definition
 
@@ -97,7 +98,7 @@ if IN_PROD:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     # Allow all host headers
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['ojfreshmachinedb.herokuapp.com']
 
 
 # Static files (CSS, JavaScript, Images)
