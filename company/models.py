@@ -27,8 +27,7 @@ class County(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'County'
-        verbose_name_plural = 'Counties'
+        verbose_name_plural = 'counties'
         ordering = ['name']
 
 class Country(models.Model):
@@ -38,8 +37,7 @@ class Country(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Country'
-        verbose_name_plural = 'Countries'
+        verbose_name_plural = 'countries'
         ordering = ['name']
 
 class Address(models.Model):
@@ -48,7 +46,7 @@ class Address(models.Model):
     address_3 = models.CharField(max_length=200,blank=True)
     town = models.CharField(max_length=200,blank=True)
     county = models.ForeignKey(County,null=True,blank=True)
-    post_code = models.CharField(max_length=10,blank=True,verbose_name="Post Code")
+    post_code = models.CharField(max_length=10,blank=True)
     country = models.ForeignKey(Country, null=True,blank=True)
 
     @staticmethod
@@ -65,9 +63,6 @@ class Address(models.Model):
     def __unicode__(self):
         address = Address.to_string(self)
         return address if len(address) > 0 else "No Address Given"
-
-    class Meta:
-        verbose_name = 'Address'
 
 class Company(Address):
     name = models.CharField(max_length=200,unique=True)
@@ -90,16 +85,15 @@ class Company(Address):
         return "--"
 
     class Meta:
-        verbose_name = 'Company'
-        verbose_name_plural = 'Companies'
+        verbose_name_plural = 'companies'
         ordering = ['name']
 
 class CompanyContact(Contact):
     company = models.ForeignKey(Company)
-    is_primary = models.BooleanField(default=False,verbose_name="Is Primary?")
+    is_primary = models.BooleanField(default=False,verbose_name="is primary?")
 
     class Meta:
-        verbose_name = 'Contact'
+        verbose_name = 'contact'
         ordering = ['-is_primary']
 
 class Site(Address):
@@ -125,18 +119,17 @@ class Site(Address):
 
     def address_to_string(self):
         return self.__unicode__()
-    address_to_string.short_description = "Address"
+    address_to_string.short_description = "address"
 
     class Meta:
-        verbose_name = 'Site'
         ordering = ['company']
 
 class SiteContact(Contact):
     site = models.ForeignKey(Site)
-    is_primary = models.BooleanField(default=False,verbose_name="Is Primary?")
+    is_primary = models.BooleanField(default=False,verbose_name="is primary?")
 
     class Meta:
-        verbose_name = 'Contact'
+        verbose_name = 'contact'
         ordering =['-is_primary']
 
 

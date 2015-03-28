@@ -50,7 +50,7 @@ class MachineModel(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Model'
+        verbose_name = 'model'
         ordering = ['name']
 
 class Supplier(models.Model):
@@ -60,37 +60,35 @@ class Supplier(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Supplier'
         ordering = ['name']
 
 class Machine(models.Model):
     site = models.ForeignKey('company.Site')
-    serial = models.CharField(max_length=32,blank=True,verbose_name="Serial #",
+    serial = models.CharField(max_length=32,blank=True,verbose_name="serial #",
                               help_text="Try to specify if possible, leave blank if not known.")
-    machine_model = models.ForeignKey(MachineModel,verbose_name="Model")
-    invoice_number = models.CharField(max_length=32,blank=True,verbose_name="Invoice No.")
-    invoice_date = models.DateField(null=True,blank=True,verbose_name="Invoice Date")
-    bought_date = models.DateField(null=True,blank=True,verbose_name="Date")
+    machine_model = models.ForeignKey(MachineModel,verbose_name="model")
+    invoice_number = models.CharField(max_length=32,blank=True,verbose_name="invoice no.")
+    invoice_date = models.DateField(null=True,blank=True)
+    bought_date = models.DateField(null=True,blank=True,verbose_name="date")
     supplier = models.ForeignKey(Supplier,null=True,blank=True)
-    supplier_invoice = models.CharField(max_length=32,blank=True,verbose_name="Supplier Invoice")
-    bought_price = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="Price")
-    bought_exchange_rate = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="Exchange Rate")
-    sold_price = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="Price")
-    sold_exchange_rate = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="Exchange Rate")
-    manufacture_date = models.DateField(null=True,blank=True,verbose_name="Manufacture Date")
-    last_pat = models.DateField(null=True,blank=True,verbose_name="Last PAT")
-    next_pat = models.DateField(null=True,blank=True,verbose_name="Next PAT")
-    last_maintenance = models.DateField(null=True,blank=True,verbose_name="Last Maintenance")
-    next_maintenance = models.DateField(null=True,blank=True,verbose_name="Next Maintenance")
-    on_loan = models.BooleanField(default=False,verbose_name="On Loan")
-    is_fixed_asset = models.BooleanField(default=False,verbose_name="Is Fixed Asset")
+    supplier_invoice = models.CharField(max_length=32,blank=True)
+    bought_price = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="price")
+    bought_exchange_rate = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="exchange rate")
+    sold_price = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="price")
+    sold_exchange_rate = models.DecimalField(max_digits=7,decimal_places=2,null=True,blank=True,verbose_name="exchange rate")
+    manufacture_date = models.DateField(null=True,blank=True)
+    last_pat = models.DateField(null=True,blank=True,verbose_name="last PAT")
+    next_pat = models.DateField(null=True,blank=True,verbose_name="next PAT")
+    last_maintenance = models.DateField(null=True,blank=True)
+    next_maintenance = models.DateField(null=True,blank=True)
+    on_loan = models.BooleanField(default=False)
+    is_fixed_asset = models.BooleanField(default=False)
 
     def __unicode__(self):
         serial = "UNKNOWN" if self.serial == "" else self.serial
         return "#%s [%s]" % (serial,self.machine_model)
 
     class Meta:
-        verbose_name = 'Machine'
         ordering = ['serial']
 
 class Ledger(models.Model):
@@ -118,5 +116,5 @@ class Ledger(models.Model):
         return "%s '%s'" % (self.type, comment)
 
     class Meta:
-        verbose_name = 'Ledger Item'
+        verbose_name = 'ledger item'
         ordering = ['-date']
